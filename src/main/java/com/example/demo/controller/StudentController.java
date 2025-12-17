@@ -1,8 +1,9 @@
 package com.example.demo.controller;
 
-import org
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bnd.annotation.Restcontroller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.Restcontroller;
 
 import com.example.demo.entity.Stuentity;
 import com.example.demo.service.StudentService;
@@ -13,7 +14,7 @@ public class StudentController{
     StudentService studentService;
 
     @PostMapping("/postdata")
-    public Student postdata(@RequestBody Stuentity student){
+    public Stuentity postdata(@RequestBody Stuentity student){
         return studentService.saveStuentity(student);
     }
 
