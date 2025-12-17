@@ -14,6 +14,6 @@ public class StudentServiceImple implements StudentService{
         this.studentRepository=studentRepository;
     }
     public Stuentity saveStuentity(Stuentity student){
-        return 
+        return studentRepository.save(student);
     }
 }
